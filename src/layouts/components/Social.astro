@@ -1,0 +1,92 @@
+---
+import { Icon } from "astro-icon/components";
+const { source, className } = Astro.props;
+
+const {
+  facebook,
+  twitter,
+  mastodon,
+  instagram,
+  youtube,
+  linkedin,
+  github,
+  gitlab,
+  discord,
+  slack,
+  medium,
+  codepen,
+  bitbucket,
+  dribbble,
+  behance,
+  pinterest,
+  soundcloud,
+  tumblr,
+  reddit,
+  vk,
+  whatsapp,
+  snapchat,
+  vimeo,
+  tiktok,
+  foursquare,
+  rss,
+  email,
+  phone,
+  address,
+  skype,
+  website,
+} = source;
+
+const socialIcons = [
+  { name: "facebook", url: facebook, icon: "mdi:facebook" },
+  { name: "twitter", url: twitter, icon: "mdi:twitter" },
+  { name: "mastodon", url: mastodon, icon: "mdi:mastodon" },
+  { name: "instagram", url: instagram, icon: "mdi:instagram" },
+  { name: "youtube", url: youtube, icon: "mdi:youtube" },
+  { name: "linkedin", url: linkedin, icon: "mdi:linkedin" },
+  { name: "github", url: github, icon: "mdi:github" },
+  { name: "gitlab", url: gitlab, icon: "mdi:gitlab" },
+  { name: "discord", url: discord, icon: "mdi:discord" },
+  { name: "slack", url: slack, icon: "mdi:slack" },
+  { name: "medium", url: medium, icon: "mdi:medium" },
+  { name: "codepen", url: codepen, icon: "mdi:codepen" },
+  { name: "bitbucket", url: bitbucket, icon: "mdi:bitbucket" },
+  { name: "dribbble", url: dribbble, icon: "mdi:dribbble" },
+  { name: "behance", url: behance, icon: "mdi:behance" },
+  { name: "pinterest", url: pinterest, icon: "mdi:pinterest" },
+  { name: "soundcloud", url: soundcloud, icon: "mdi:soundcloud" },
+  { name: "tumblr", url: tumblr, icon: "mdi:tumblr" },
+  { name: "reddit", url: reddit, icon: "mdi:reddit" },
+  { name: "vk", url: vk, icon: "mdi:vk" },
+  { name: "whatsapp", url: whatsapp, icon: "mdi:whatsapp" },
+  { name: "snapchat", url: snapchat, icon: "mdi:snapchat" },
+  { name: "vimeo", url: vimeo, icon: "mdi:vimeo" },
+  { name: "tiktok", url: tiktok, icon: "mdi:tiktok" },
+  { name: "foursquare", url: foursquare, icon: "mdi:foursquare" },
+  { name: "skype", url: skype, icon: "mdi:skype" },
+  { name: "website", url: website, icon: "mdi:web" },
+  { name: "rss", url: rss, icon: "mdi:rss" },
+  { name: "email", url: email ? `mailto:${email}` : null, icon: "mdi:email" },
+  { name: "phone", url: phone ? `tel:${phone}` : null, icon: "mdi:phone" },
+  { name: "address", url: address, icon: "mdi:map-marker" },
+];
+---
+
+<ul class={className}>
+  {
+    socialIcons.map(
+      (social) =>
+        social.url && (
+          <li class="inline-block">
+            <a
+              aria-label={social.name}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              <Icon name={social.icon} />
+            </a>
+          </li>
+        ),
+    )
+  }
+</ul>

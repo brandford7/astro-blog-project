@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import { slugify } from "@lib/utils/textConverter";
+
+const { posts, limit = 3 } = Astro.props;
+
+// Function to trim the title
+const trimTitle = (title: string, maxLength: number) => {
+  return title.length > maxLength
+    ? title.substring(0, maxLength) + "..."
+    : title;
+};
+---
+
+<div
+  class="hidden lg:block fixed right-0 top-1/4 w-64 bg-white shadow-md rounded-l-lg overflow-hidden"
+>
+  {
+    posts.slice(0, limit).map((post: any) => (
+      <div class="flex items-center p-2 border-b last:border-b-0">
+        {post.data.image && (
+          <a
+            href={`/${post.slug}/`}
+            class="w-1/3 flex-shrink-0 overflow-hidden rounded-lg"
+          >
+            <div class="aspect-w-16 aspect-h-9">
+              <Image
+                class="object-cover w-full h-full transition duration-300 hover:scale-105 rounded-lg"
+                src={post.data.image}
+                alt={post.data.title}
+                width={100}
+                height={56}
+                transition:name={`image-${post.slug}`}
+              />
+            </div>
+          </a>
+        )}
+        <div class="w-2/3 pl-2">
+          <h3
+            class="text-xs font-medium"
+            transition:name={`title-${post.slug}`}
+          >
+            <a
+              href={`/${post.slug}/`}
+              class="hover:text-primary transition duration-300"
+            >
+              {trimTitle(post.data.title, 50)}
+            </a>
+          </h3>
+        </div>
+      </div>
+    ))
+  }
+</div>

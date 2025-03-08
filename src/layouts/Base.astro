@@ -1,0 +1,149 @@
+---
+import TwSizeIndicator from "@components/TwSizeIndicator.astro";
+import config from "@config/config.json";
+import theme from "@config/theme.json";
+import { plainify } from "@lib/utils/textConverter";
+import Footer from "@partials/Footer.astro";
+import Header from "@partials/Header.astro";
+import "@styles/style.scss";
+
+import { ViewTransitions } from "astro:transitions";
+
+import { getImage } from "astro:assets";
+import faviconSrc from "../assets/favicons/favicon.png";
+import faviconSvgSrc from "../assets/favicons/favicon.svg";
+
+// font families
+const pf = theme.fonts.font_family.primary;
+const sf = theme.fonts.font_family.primary_type;
+
+// types for frontmatters
+export interface Props {
+  title?: string;
+  meta_title?: string;
+  description?: string;
+  image?: string;
+  noindex?: boolean;
+  canonical?: string;
+  author?: string;
+}
+
+const defaultImage = "images/posts/01.jpg";
+// distructure frontmatters
+const defaultAuthor = config.metadata.meta_author;
+
+const {
+  title,
+  meta_title,
+  description,
+  image = defaultImage,
+  noindex,
+  canonical,
+  author = defaultAuthor,
+} = Astro.props;
+const canonicalURL = `${config.site.base_url}/${Astro.url.pathname.replace(
+  "/",
+  "",
+)}`;
+
+const mytitle = plainify(
+  meta_title ? meta_title : title ? title : config.site.title,
+);
+const mydescription = plainify(
+  description ? description : config.metadata.meta_description,
+);
+
+const myimage = `${config.site.base_url}${image}`;
+
+const appleTouchIcon = await getImage({
+  src: faviconSrc,
+  width: 180,
+  height: 180,
+  format: "png",
+});
+const faviconSvg = await getImage({ src: faviconSvgSrc, format: "svg" });
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: title,
+  description: description,
+  author: {
+    "@type": "Person",
+    name: author,
+    url: "https://www.bitdoze.com/authors/dragos/",
+  },
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <ViewTransitions />
+    <title>{mytitle}</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-724JNXPRWQ"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-724JNXPRWQ');
+</script>
+    
+<script
+    
+      defer
+      data-domain="codetidehub.com"
+      data-api="/theone/dra/event"
+      src="/theone/dr/script.js"></script>
+
+ {/*    <script is:inline data-grow-initializer="">!(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTozYThlOTI5MC04MDhmLTRmNzItYTkzYy04ZGQ1YTcwOTVhOTg=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();</script>
+*/}
+    <script is:inline type="text/javascript" async="async" data-noptimize="1" data-cfasync="false" src="//scripts.scriptwrapper.com/tags/3a8e9290-808f-4f72-a93c-8dd5a7095a98.js"></script>
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href={faviconSvg.src} type="image/svg+xml" />
+    <link rel="apple-touch-icon" href={appleTouchIcon.src} />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="canonical" href={canonicalURL} />
+    <!-- noindex robots -->
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
+
+    <!-- Primary Meta Tags -->
+
+    <meta name="title" content={mytitle} />
+    <meta name="description" content={mydescription} />
+
+    <meta name="author" content={author} />
+    <meta name="copyright" content={author} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={mytitle} />
+    <meta property="og:description" content={mydescription} />
+    <meta property="og:image" content={myimage} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={mytitle} />
+    <meta name="twitter:description" content={mydescription} />
+    <meta name="twitter:image" content={myimage} />
+    <meta name="twitter:creator" content="@codetidehub" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body>
+    <TwSizeIndicator />
+    <Header />
+    <main id="main-content" class="min-h-[60vh]">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

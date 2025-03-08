@@ -1,0 +1,26 @@
+---
+import config from "@config/config.json";
+import Base from "@layouts/Base.astro";
+import Hero from "@components/widgets/Hero.astro";
+import Tools from "@components/widgets/Tools.astro";
+import Posts from "@layouts/Posts.astro";
+import TagPosts from "@layouts/components/widgets/TagPosts.astro";
+import { getSinglePage } from "@lib/contentParser.astro";
+import { sortByDate } from "@lib/utils/sortFunctions";
+
+const posts = await getSinglePage("posts");
+const sortedPosts = sortByDate(posts);
+const currentPosts = sortedPosts.slice(0, 6);
+---
+
+<Base>
+  <Hero />
+  <Tools />
+  <section class="section">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-center mb-12">Latest Articles</h2>
+      <Posts posts={currentPosts} className="row" fluid={false} />
+    </div>
+  </section>
+  <TagPosts />
+</Base>
