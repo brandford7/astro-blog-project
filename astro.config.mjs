@@ -1,3 +1,4 @@
+import "./src/polyfills.js";
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
