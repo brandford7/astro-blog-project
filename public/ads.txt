@@ -51,4 +51,8 @@ inmobi.com, 264debfabe2f4a07beb83aa2d92136ef, DIRECT, 83e75a7ae333ca9d
 improvedigital.com, 2254, RESELLER
 video.unrulymedia.com, 1346664749, DIRECT
 sonobi.com, 52355162e8, RESELLER, d1a215d9eb5aee9e
+openx.com, 537100188, RESELLER, 6a698e2ec38604c6
+openx.com, 558228330, RESELLER, 6a698e2ec38604c6
+contextweb.com, 561118, RESELLER, 89ff185a4c4e857c
+smartadserver.com, 4524, RESELLER, 060d053dcf45cbf3
 
