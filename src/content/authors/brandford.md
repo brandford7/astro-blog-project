@@ -1,21 +1,30 @@
 ---
 title: Brandford
-image: "/images/authors/dragos.webp"
+image: "/images/authors/brandford.jpeg"
 description: Brandford is a software developer
 social:
-  facebook: https://www.facebook.com/dragos.balota
-  twitter: https://www.twitter.com/bitdoze
+  facebook: https://www.facebook.com/brandford-junior
+  twitter: https://www.twitter.com/juniorbrandford
   instagram: https://www.instagram.com/
 ---
 
-Hey there! Allow me to introduce myself. My name is Dragos, and I'm a seasoned IT professional with over a decade of experience in the field. For the past four years, I have been deeply immersed in the fascinating world of DevOps, constantly honing my skills and staying up to date with the latest industry trends.
+My name is Brandford, and I’m a passionate software developer with about four years of experience in the field.  
 
-One of my passions lies in writing about WordPress, and I have a dedicated platform called [wpdoze.com](https://www.wpdoze.com/)where I share my insights and expertise on this incredibly popular content management system. From practical tips to in-depth tutorials, I strive to provide valuable resources that empower individuals and businesses to make the most out of their WordPress websites.
+## My Expertise
 
-In addition to my love for WordPress, I am equally enthusiastic about Linux, static sites, CMS, VPS, and all things related to DevOps. These subjects have captivated my attention, prompting me to launch another platform called [bitdoze.com](https://www.bitdoze.com/). On this website, I delve into the intricate workings of Linux, explore the realm of static sites, and shed light on the ever-evolving world of content management systems. Moreover, I offer expert guidance on VPS setups and share my insights into the fascinating realm of DevOps.
+I specialize in **frontend development**, primarily working with **React** and **Next.js** to build engaging and user-friendly applications. Additionally, I have experience in:  
 
-Beyond my professional pursuits, I find solace in two enjoyable hobbies: traveling and indulging in movies. Exploring new destinations and immersing myself in diverse cultures rejuvenates my spirit and broadens my perspectives. It fuels my creativity and inspires me to think outside the box, which undoubtedly reflects in my work.
+- **Languages:** TypeScript, JavaScript, C#, X++  
+- **Frontend Technologies:** React, NextJS, Astro, Sanity CMS
+- **Backend Technologies:** Node.js, ASP.NET, Mongodb,Expressjs  
+- **ERP Systems:** Microsoft Dynamics AX 2012 (development & functional experience)  
 
-Furthermore, I have an extensive network of more than ten affiliate sites that I actively promote. These platforms cover a range of topics and products, allowing me to connect with a diverse audience and share valuable recommendations. Collaborating with like-minded individuals and fostering partnerships is something I genuinely cherish, as it enables me to contribute to the growth and success of others while expanding my own horizons.
+## Education  
 
-In a nutshell, I'm Dragos—an IT professional with a profound passion for WordPress, Linux, static sites, CMS, VPS, and DevOps. Through my websites, wpdoze.com and bitdoze.com, I aim to share my expertise, empower others, and foster a sense of community within the tech realm. When I'm not immersed in the digital landscape, you can find me embarking on exciting journeys or unwinding with a captivating movie. I'm thrilled to be on this ever-evolving professional journey, and I look forward to sharing my knowledge and experiences with you.
+I hold a **Bachelor’s degree in Physics** and a **Master of Science in Computer Science**, both from the **University of Ghana**.  
+
+## Passion & Hobbies  
+
+When I’m not coding, you’ll find me **playing football** or **blogging** about tech. My blog, [codetidehub.com](https://www.codetidehub.com/), is where I share insights, tutorials, and experiences from my journey in software development.  
+
+I’m always looking to learn, build, and collaborate. Let’s connect and create something amazing. 

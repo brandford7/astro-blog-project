@@ -1,10 +1,10 @@
 ---
 title: "Terms and Conditions"
-description: "bitdoze.com Terms and Conditions page"
+description: "codetidehub.com Terms and Conditions page"
 draft: false
 ---
 
-Last updated\_: March 14, 2023
+Last updated\_: March 11, 2025
 
 Please read these terms and conditions carefully before using Our Service.
 
@@ -32,7 +32,7 @@ For the purposes of these Terms and Conditions:
 
 - **Third-party Social Media Service** means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.
 
-- **Website** refers to Bit Doze, accessible from [https://www.bitdoze.com](https://www.bitdoze.com)
+- **Website** refers to Bit Doze, accessible from [https://www.codetidehub.com](https://www.codetidehub.com)
 
 - **You** means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
 
