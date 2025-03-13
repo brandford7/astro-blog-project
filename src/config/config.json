@@ -4,7 +4,7 @@
     "base_url": "https://www.codetidehub.com",
     "base_path": "/",
     "trailing_slash": true,
-    "favicon": "/bitdoze_logo_better.webp",
+    "favicon": "../favicon",
     "logo": "/bitdoze_logo_better.webp",
     "logo_width": "200",
     "logo_height": "30",
@@ -19,7 +19,7 @@
   "metadata": {
     "meta_author": "Brandford Junior",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Discover the latest news and insights on Web Development, programming languages, and strategies to help you grow your online presence."
+    "meta_description": "Discover the latest news and insights on Web Development, javascript,typescript, and anything Reactjs."
   },
 
   "params": {
