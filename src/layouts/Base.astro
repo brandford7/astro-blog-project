@@ -7,7 +7,7 @@ import Footer from "@partials/Footer.astro";
 import Header from "@partials/Header.astro";
 import "@styles/style.scss";
 
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter, ViewTransitions } from "astro:transitions";
 
 import { getImage } from "astro:assets";
 import faviconSrc from "../assets/favicons/favicon.png";
@@ -81,7 +81,7 @@ const schema = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <ViewTransitions />
+    <ClientRouter />
     <title>{mytitle}</title>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-724JNXPRWQ"></script>
