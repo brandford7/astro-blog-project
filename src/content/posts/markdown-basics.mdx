@@ -1,0 +1,285 @@
+---
+date: 2025-03-17T12:00:00Z
+title: "Markdown Basics: Bold Text, Indentation, File Format, and Strikethrough"
+description: "Learn how to use bold text, indentation, strikethrough, and understand the Markdown file format in this beginner-friendly guide."
+image: "../../assets/images/25/03/markdown-basics.png"
+categories: ["web development", "markdown"]
+authors: ["Brandford"]
+tags: ["Markdown", "Formatting", "Beginner Guide"]
+canonical: "https://www.codetidehub.com/markdown-basics/"
+---
+
+import YouTubeEmbed from "../../layouts/components/widgets/YouTubeEmbed.astro";
+
+Markdown is a lightweight markup language that simplifies formatting for documents, blogs, and documentation. In this guide, we'll explore essential Markdown features, including **bold text**, **indentation**, **file format**, and **strikethrough**—along with some additional related syntax.
+
+---
+
+## What is a Markdown File?
+
+A **Markdown file** is a plain text document that uses simple syntax to format content. It is widely used in documentation, blogging, and note-taking.
+
+### Key Characteristics:
+
+- **File Extensions:** `.md` or `.markdown`
+- **Common Use Cases:** README files, documentation, static site content
+- **Conversion:** Markdown can easily be converted to **HTML, PDF,** or **Word documents**
+- **Supported Platforms:** GitHub, VS Code, Jupyter Notebooks, and many more
+
+### Example Markdown File:
+
+```md
+# My First Markdown File
+
+This is a simple Markdown document.
+
+- **Bold** text
+- _Italic_ text
+- ~~Strikethrough~~ text
+
+[Click here](https://example.com) to visit an external link.
+```
+
+---
+
+## How to Bold in Markdown
+
+To **bold** text in Markdown, use double asterisks (`**`) or double underscores (`__`):
+
+```md
+**This is bold text**
+**This is also bold text**
+```
+
+This will render as:
+
+**This is bold text**  
+**This is also bold text**
+
+### Combining Bold and Italics
+
+Markdown allows you to combine formatting styles:
+
+```md
+**_This is bold and italic_**
+**_This is also bold and italic_**
+```
+
+This will render as:
+
+**_This is bold and italic_**  
+**_This is also bold and italic_**
+
+### When to Use Bold Text
+
+Use bold text for:
+
+- Highlighting **important** information
+- Emphasizing key points in documentation
+- Making section titles more visible
+
+---
+
+## How to Indent in Markdown
+
+Markdown does not use traditional indentation for paragraphs, but it supports:
+
+1. **Code block indentation**
+2. **Blockquote indentation**
+3. **List indentation**
+
+### 1. Code Block Indentation
+
+Use triple backticks (```) to create an **indented code block**:
+
+````md
+```
+function helloWorld() {
+  console.log("Hello, world!");
+}
+```
+````
+
+Rendered as:
+
+```md
+function helloWorld() {
+console.log("Hello, world!");
+}
+```
+
+Alternatively, you can use **four spaces** before each line:
+
+```md
+    function helloWorld() {
+        console.log("Hello, world!");
+    }
+```
+
+### 2. Blockquote Indentation
+
+Use `>` for a blockquote:
+
+```md
+> This is an indented blockquote.
+>
+> > This is a nested blockquote.
+```
+
+Rendered as:
+
+> This is an indented blockquote.
+>
+> > This is a nested blockquote.
+
+### 3. List Indentation
+
+Use spaces or tabs to create **nested lists**:
+
+```md
+- First level
+  - Second level
+    - Third level
+```
+
+Rendered as:
+
+- First level
+  - Second level
+    - Third level
+
+You can also indent **ordered lists**:
+
+```md
+1. First item  
+   1.1 Sub-item
+   - Bullet inside numbered list
+```
+
+Rendered as:
+
+1. First item  
+   1.1 Sub-item
+   - Bullet inside numbered list
+
+---
+
+## Markdown Strikethrough
+
+To ~~strike through~~ text in Markdown, use double tildes (`~~`):
+
+```md
+~~This text is strikethrough~~
+```
+
+Rendered as:
+
+~~This text is strikethrough~~
+
+### Combining Strikethrough with Other Formatting
+
+You can combine strikethrough with bold and italics:
+
+```md
+~~**This is bold strikethrough**~~  
+~~_This is italic strikethrough_~~
+```
+
+Rendered as:
+
+~~**This is bold strikethrough**~~  
+~~_This is italic strikethrough_~~
+
+### When to Use Strikethrough
+
+- Indicating **deprecated** content
+- Showing a correction or edit
+- Creating visual emphasis
+
+---
+
+## Additional Markdown Syntax
+
+### Headings
+
+Use `#` for headings:
+
+```md
+# H1
+
+## H2
+
+### H3
+
+#### H4
+
+##### H5
+
+###### H6
+```
+
+Rendered as:
+
+# H1
+
+## H2
+
+### H3
+
+#### H4
+
+##### H5
+
+###### H6
+
+### Horizontal Lines
+
+Use three dashes (`---`) or three underscores (`___`) for horizontal dividers:
+
+```md
+---
+```
+
+---
+
+### Links
+
+Create clickable links:
+
+```md
+[Visit my website](https://example.com)
+```
+
+Rendered as:
+
+[Visit my website](https://example.com)
+
+### Images
+
+Use `![]()` to embed images:
+
+```md
+![Markdown Logo](https://markdown-here.com/img/icon256.png)
+```
+
+Rendered as:
+
+![Markdown Logo](https://markdown-here.com/img/icon256.png)
+
+---
+
+## Conclusion
+
+Markdown is a powerful yet simple way to format text. In this guide, we covered:
+✅ **Bold Text**  
+✅ **Indentation Techniques**  
+✅ **Markdown File Format**  
+✅ **Strikethrough Formatting**  
+✅ **Other Markdown Essentials**
+
+For a step-by-step video tutorial, check out:
+
+<YouTubeEmbed
+  url="https://www.youtube.com/embed/example_video_id"
+  label="Markdown Formatting Basics"
+/>

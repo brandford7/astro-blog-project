@@ -1,7 +1,7 @@
 ---
 import Base from "@layouts/Base.astro";
 import { markdownify } from "@lib/utils/textConverter";
-import { getEntryBySlug } from "astro:content";
+import { getEntry } from "astro:content";
 import ToolCard from "@components/aicomponents/ToolCard.astro";
 
 export const prerender = false;
@@ -14,7 +14,7 @@ let meta_title = "AI Tools | Your Site Name";
 let image = "/images/ai-tools-banner.jpg"; // Provide a default image path
 
 try {
-  entry = await getEntryBySlug("pages", "tools");
+  entry = await getEntry("pages", "tools");
   if (entry) {
     ({ title, description, meta_title, image } = entry.data);
   }
