@@ -6,15 +6,18 @@ import { getSinglePage } from "@lib/contentParser.astro";
 import dateFormat from "@lib/utils/dateFormat";
 import { humanize, markdownify, slugify } from "@lib/utils/textConverter";
 import { Icon } from "astro-icon/components";
-import { type CollectionEntry } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import PostHeadings from "./components/table-of-contents/PostHeadings.astro";
 import RightSimilarPosts from "@components/RightSimilarPosts.astro";
 
-const allAuthors = await getSinglePage("authors");
-const allPosts = await getSinglePage("posts");
+const allAuthors = await getSinglePage('authors');
+//const allPosts = await getSinglePage('posts');
+const allPosts = await getCollection('posts', ({ data }) => {
+  return data.draft !== true;
+});
 
 interface Props {
-  post: CollectionEntry<"posts">;
+  post: CollectionEntry<'posts'>;
 }
 const { post } = Astro.props;
 
